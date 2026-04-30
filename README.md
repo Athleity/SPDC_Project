@@ -1,258 +1,154 @@
-\# SPDC with BBO Crystal: Quantum Entanglement \& Machine Learning
+# SPDC with BBO Crystal
 
+Quantum Entanglement Detection and Machine Learning
 
+Complete pipeline for Spontaneous Parametric Down-Conversion (SPDC) analysis using a BBO crystal, featuring quantum state tomography, Bell inequality violation, sparsity-driven entanglement detection, and machine learning prediction.
 
-\[!\[Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+Paper implementation: arXiv:2511.12546 - Sparsity-driven entanglement detection
 
-\[!\[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+---
 
-
-
-\## Overview
-
-
-
-Complete quantum optics project for Spontaneous Parametric Down-Conversion (SPDC) using a BBO crystal. Integrates theory, simulation, experimental data analysis, machine learning, and sparsity-driven entanglement detection.
-
-
-
-\## Key Results
-
-
+## Key Results
 
 | Metric | Value | Significance |
-
 |--------|-------|--------------|
-
 | EPR Parameter | 0.1712 | ENTANGLED |
-
 | Bell Parameter S | 2.6872 | VIOLATION |
-
 | State Fidelity | 0.9622 | 96 percent match |
-
 | Concurrence | 0.9274 | Strong entanglement |
+| Random Forest R2 | 0.9294 | Power prediction |
+| LSTM R2 | 0.8269 | Time series forecast |
 
-| Power Prediction R2 | 0.9294 | Random Forest |
+---
 
-| LSTM Forecast R2 | 0.8269 | Time series |
+## Project Structure
 
-| Raw SNR | 3.2849 | Baseline |
-
-| Lasso SNR | 3.2881 | Improved |
-
-
-
-\## Project Structure
-
-
-
-SPDC\_Project/
-
+SPDC_Project/
 |
-
-|--- 01\_Thesis\_Figures/
-
+|--- 01_Thesis_Figures/
 |    |--- 17 publication-ready figures
-
 |
-
-|--- 02\_Python\_Scripts/
-
-|    |--- Main/ (core quantum optics)
-
+|--- 02_Python_Scripts/
+|    |--- Main/ (quantum tomography, Bell inequality)
 |    |--- Analysis/ (data exploration)
-
 |    |--- Pipeline/ (end-to-end pipelines)
-
 |    |--- Visualization/ (plotting utilities)
-
 |
-
-|--- 03\_Data/
-
-|    |--- ECMBI\_Tomography/
-
-|         |--- FINAL\_RESULTS/ (MAIN RESULTS)
-
+|--- 03_Data/
+|    |--- ECMBI_Tomography/
+|         |--- FINAL_RESULTS/ (EPR=0.1712, SNR results)
 |         |--- 12 raw CSV files
-
 |
-
-|--- 05\_Results/
-
-|    |--- CSV\_Data/ (15 files)
-
+|--- 05_Results/
+|    |--- CSV_Data/ (15 files)
 |    |--- Graphs/ (12 files)
-
-|    |--- PDF\_Reports/ (7 files)
-
+|    |--- PDF_Reports/ (7 files)
 |
+|--- 06a_SNLO_Graphs/
+     |--- SNLO simulation outputs
 
-|--- 06a\_SNLO\_Graphs/
+---
 
-&#x20;    |--- SNLO simulation outputs
-
-
-
-\## Quick Start
-
-
+## Quick Start
 
 Clone the repository:
-
-
-
-git clone https://github.com/YOUR\_USERNAME/SPDC\_Project.git
-
-cd SPDC\_Project
-
-
+git clone https://github.com/Athleity/SPDC_Project.git
+cd SPDC_Project
 
 Install dependencies:
-
-
-
 pip install -r requirements.txt
 
+Run the pipeline:
+cd 02_Python_Scripts
+python spdc_pipeline.py
 
+View results:
+start ..\03_Data\ECMBI_Tomography\FINAL_RESULTS\
 
-Run the complete pipeline:
+---
 
+## Dependencies
 
+- numpy >= 1.21.0
+- pandas >= 1.3.0
+- matplotlib >= 3.4.0
+- scikit-learn >= 1.0.0
+- tensorflow >= 2.10.0
+- qutip >= 4.7.0
+- scipy >= 1.7.0
+- seaborn >= 0.11.0
 
-cd 02\_Python\_Scripts
+---
 
-python spdc\_pipeline.py
+## Results Location
 
+All final results are in: 03_Data/ECMBI_Tomography/FINAL_RESULTS/
 
+Files:
+- epr_results.csv (EPR = 0.1712)
+- snr_results.csv (SNR improvement +0.0083 dB)
+- heatmap_comparison.png
+- comparison_plot.png
+- summary_report.txt
 
-View the results:
+---
 
-
-
-start ../03\_Data/ECMBI\_Tomography/FINAL\_RESULTS/
-
-
-
-\## Dependencies
-
-
-
-\- numpy
-
-\- pandas
-
-\- matplotlib
-
-\- scikit-learn
-
-\- tensorflow
-
-\- qutip
-
-\- scipy
-
-\- seaborn
-
-
-
-\## Paper Implementation
-
-
+## Paper Implementation
 
 This project implements sparsity-driven entanglement detection from arXiv:2511.12546.
 
+- Equation 1: Sample covariance matrix
+- Equation 2: L1-regularization with LassoCV
+- Equation 3: SNR calculation
+- EPR Criterion: Less than 1 equals entangled
 
+---
 
-\- Equation 1: Sample covariance matrix
+## Machine Learning Results
 
-\- Equation 2: L1-regularization with LassoCV
+| Model | Task | Result |
+|-------|------|--------|
+| Random Forest | Predict pump power | R2 = 0.9294 |
+| LSTM | Forecast photon counts | R2 = 0.8269 |
+| SVM | Classify signal vs noise | Accuracy = 99.9% |
 
-\- Equation 3: SNR calculation
+---
 
-\- EPR Criterion: Less than 1 equals entangled
+## SNLO Simulations
 
+| Parameter | Value |
+|-----------|-------|
+| BBO angle for SHG | 33.2 degrees |
+| Compensator setting | 77.5 degrees |
+| Signal wavelength | 583 nm |
+| Idler wavelength | 900 nm |
+| Pump wavelength | 354 nm |
 
+---
 
-\## Results Location
+## Limitations
 
+- Small dataset: 12 samples only
+- SNR improvement limited by sample size
+- Downloaded data (not own experiment)
 
+---
 
-All final results are in: 03\_Data/ECMBI\_Tomography/FINAL\_RESULTS/
+## Acknowledgments
 
+- ECMBI Dataset (Zenodo 10927445)
+- arXiv:2511.12546
+- SNLO Software
+- QuTiP
 
+---
 
-Files:
-
-\- epr\_results.csv (EPR = 0.1712)
-
-\- snr\_results.csv (SNR improvement)
-
-\- heatmap\_comparison.png
-
-\- comparison\_plot.png
-
-\- summary\_report.txt
-
-
-
-\## What You Can Learn
-
-
-
-1\. Quantum Optics: SPDC, BBO crystals, phase matching
-
-2\. Simulation: SNLO software for nonlinear optics
-
-3\. Data Analysis: Quantum tomography, Bell inequalities
-
-4\. Machine Learning: Random Forest, LSTM, SVM
-
-5\. Signal Processing: Sparsity denoising
-
-
-
-\## Limitations
-
-
-
-\- Small dataset: 12 samples only
-
-\- SNR improvement limited by sample size
-
-\- Downloaded data (not own experiment)
-
-
-
-\## Acknowledgments
-
-
-
-\- ECMBI Dataset (Zenodo 10927445)
-
-\- arXiv:2511.12546
-
-\- SNLO Software
-
-\- QuTiP
-
-
-
-\## License
-
-
+## License
 
 MIT License
 
-
-
-\## Author
-
-
+## Author
 
 GitHub: @Athleity
 
-
-
-Project Link: https://github.com/Athleity/SPDC\_Project
-
+Project Link: https://github.com/Athleity/SPDC_Project
