@@ -25,27 +25,27 @@ Paper implementation: arXiv:2511.12546 - Sparsity-driven entanglement detection
 
 SPDC_Project/
 |
-|--- 01_Thesis_Figures/
-|    |--- 17 publication-ready figures
+|-- 01_Thesis_Figures/
+|   |-- 17 publication-ready figures
 |
-|--- 02_Python_Scripts/
-|    |--- Main/ (quantum tomography, Bell inequality)
-|    |--- Analysis/ (data exploration)
-|    |--- Pipeline/ (end-to-end pipelines)
-|    |--- Visualization/ (plotting utilities)
+|-- 02_Python_Scripts/
+|   |-- Main/                 (quantum tomography, Bell inequality)
+|   |-- Analysis/             (data exploration scripts)
+|   |-- Pipeline/             (end-to-end pipelines)
+|   |-- Visualization/        (plotting utilities)
 |
-|--- 03_Data/
-|    |--- ECMBI_Tomography/
-|         |--- FINAL_RESULTS/ (EPR=0.1712, SNR results)
-|         |--- 12 raw CSV files
+|-- 03_Data/
+|   |-- ECMBI_Tomography/
+|       |-- FINAL_RESULTS/    (EPR=0.1712, SNR results)
+|       |-- 12 raw CSV files
 |
-|--- 05_Results/
-|    |--- CSV_Data/ (15 files)
-|    |--- Graphs/ (12 files)
-|    |--- PDF_Reports/ (7 files)
+|-- 05_Results/
+|   |-- CSV_Data/             (15 files)
+|   |-- Graphs/               (12 files)
+|   |-- PDF_Reports/          (7 files)
 |
-|--- 06a_SNLO_Graphs/
-     |--- SNLO simulation outputs
+|-- 06a_SNLO_Graphs/
+    |-- SNLO simulation outputs
 
 ---
 
