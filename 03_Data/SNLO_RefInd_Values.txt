@@ -1,0 +1,14 @@
+BBO Refractive Indices from SNLO
+Date: [today]
+
+583 nm:
+  n_o = 1.670120
+  n_e = 1.551929
+  Δn = 0.118191
+
+900 nm:
+  n_o = 1.657748
+  n_e = 1.543882
+  Δn = 0.113866
+
+Compensator setting = 77.5°

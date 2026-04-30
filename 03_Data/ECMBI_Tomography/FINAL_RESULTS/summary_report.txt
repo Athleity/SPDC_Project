@@ -1,0 +1,55 @@
+========================================================================
+SPARSITY DENOISING + NEURAL NETWORK PIPELINE – SUMMARY REPORT
+========================================================================
+
+Paper: Sparsity-Driven Entanglement Detection in High-Dimensional
+       Quantum States  (arXiv:2511.12546)
+
+DATA
+----
+  Files loaded : 12
+  X shape      : (12, 36)
+  Pump powers  : [20, 50, 100, 150, 200, 250] mW
+
+FILES
+  PSIPLUStwoQBtomo_20mW_2023-02-10--12h-08m_10--12h-15mS1.csv
+  PSIPLUStwoQBtomo_50mW_2023-02-10--11h-16m_10--11h-23mS1.csv
+  PSIPLUStwoQBtomo_100mW_2023-02-10--11h-26m_10--11h-34mS1.csv
+  PSIPLUStwoQBtomo_150mW_2023-02-10--11h-39m_10--11h-46mS1.csv
+  PSIPLUStwoQBtomo_200mW_2023-02-10--11h-49m_10--11h-56mS1.csv
+  PSIPLUStwoQBtomo_250mW_2023-02-10--11h-58m_10--12h-05mS1.csv
+  PSIMINUStwoQBtomo_20mW_2023-02-10--14h-43m_10--14h-50mS1.csv
+  PSIMINUStwoQBtomo_50mW_2023-02-10--15h-36m_10--15h-43mS1.csv
+  PSIMINUStwoQBtomo_100mW_2023-02-10--15h-44m_10--15h-52mS1.csv
+  PSIMINUStwoQBtomo_150mW_2023-02-10--15h-53m_10--16h-00mS1.csv
+  PSIMINUStwoQBtomo_200mW_2023-02-10--16h-50m_10--16h-58mS1.csv
+  PSIMINUStwoQBtomo_250mW_2023-02-10--17h-07m_10--17h-14mS1.csv
+
+RESULTS
+-------
+  Raw
+    SNR             : 3.284919
+    Improvement     : +0.0000 dB
+    EPR parameter   : 0.171218  (entangled)
+
+  Lasso
+    SNR             : 3.288052
+    Improvement     : +0.0083 dB
+    EPR parameter   : 0.171222  (entangled)
+
+  Neural Network
+    SNR             : 3.288052
+    Improvement     : +0.0000 dB
+    EPR parameter   : 0.171222  (entangled)
+
+  Best method : Lasso
+  Best SNR    : 3.288052
+  Best ΔSNRdB : +0.0083 dB
+
+OUTPUT FILES
+------------
+  D:\SPDC_Project\03_Data\ECMBI_Tomography\FINAL_RESULTS
+  cov_raw.csv, cov_lasso_denoised.csv, cov_nn_denoised.csv
+  heatmap_comparison.png, snr_results.csv, epr_results.csv
+  comparison_plot.png, summary_report.txt
+========================================================================

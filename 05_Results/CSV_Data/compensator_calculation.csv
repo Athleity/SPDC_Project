@@ -1,0 +1,12 @@
+section,parameter,value,units,uncertainty,uncertainty_units
+signal,n_o,1.67012,,1e-06,
+signal,n_e,1.551929,,1e-06,
+signal,phase_from_bbo,1273.783798697879,rad,12.737847105549097,rad
+signal,compensator_phase_needed,1.7028186595769128,rad,12.737847105549097,rad
+signal,displacement_needed,17.555555555537264,μm,131.32357221083248,μm
+
+idler,n_o,1.657,,1e-06,
+idler,n_e,1.541,,1e-06,
+idler,phase_from_bbo,809.8327729253696,rad,8.098333747628189,rad
+idler,compensator_phase_needed,0.698131700797056,rad,8.098333747628189,rad
+idler,displacement_needed,11.111111111100357,μm,128.88904380105168,μm

@@ -1,0 +1,4 @@
+Method,SNR,Improvement_dB
+Raw,3.284919,0.0
+Lasso,3.288052,0.0083
+Neural Network,3.288052,0.0

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# Large files (if any)
+*.keras
+*.h5
+
+# Old outputs (keep only FINAL_RESULTS)
+**/sparsity_denoising_outputs/*/
+!**/sparsity_denoising_outputs/README.md
